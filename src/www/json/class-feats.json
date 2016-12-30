@@ -1,0 +1,14 @@
+{
+  "template" : {
+    "name" : "",
+    "description" : ""
+  },
+  "rage" : {
+    "name" : "Rage",
+    "description" : "On your turn, you can enter a rage as a bonus action."
+  },
+  "unarmored_defense" : {
+    "name" : "Unarmored Defense",
+    "description" : "While you are not wearing any armor, your Armor Class equals 10 + your Dexterity modifier + your Constitution modifier. You can use a shield and still gain this benefit."
+  }
+}
