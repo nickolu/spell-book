@@ -1,27 +1,27 @@
 {
-  "name": "react_05112016",
+  "name": "spell-book",
   "version": "1.0.0",
-  "description": "Class Files",
+  "description": "View and filter spell objects",
   "main": "gulpfile.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/training4developers/react_05092016.git"
+    "url": "git+https://github.com/nickolusroy/spell-book.git"
   },
   "keywords": [],
-  "author": "Eric W. Greene",
+  "author": "Nick Cunningham",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/training4developers/react_05092016/issues"
+    "url": "https://github.com/nickolusroy/spell-book/issues"
   },
-  "homepage": "https://github.com/training4developers/react_05092016#readme",
+  "homepage": "https://github.com/nickolusroy/spell-book#readme",
   "dependencies": {
     "bootstrap": "^4.0.0-alpha.2",
     "es6-promise": "^3.1.2",
     "express": "^4.13.4",
     "react": "^0.14.8",
     "react-dom": "^0.14.8",
-    "simple-react-forms": "git+https://github.com/nickolusroy/simple-react-forms.git#master",
-    "simple-react-utilities": "git+https://github.com/nickolusroy/simple-react-utilities.git#master",
+    "simple-react-forms": "git+https://github.com/nickolusroy/simple-react-forms.git#utilities-upgrade",
+    "simple-react-utilities": "git+https://github.com/nickolusroy/simple-react-utilities.git#unit-testing-setup",
     "whatwg-fetch": "^0.11.0"
   },
   "devDependencies": {

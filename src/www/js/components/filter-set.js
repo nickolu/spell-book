@@ -1,6 +1,7 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
-import * as utilities from "../../../../node_modules/simple-react-utilities/utilities.js";
+var utilities = require("../../../../node_modules/simple-react-utilities/js/utilities.js");
+
 import { ShowHideButton } from './show-hide-button.js';
 import { FilterButtonGroup } from './filter-button-group.js';
 
