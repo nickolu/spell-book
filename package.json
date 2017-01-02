@@ -20,8 +20,8 @@
     "express": "^4.13.4",
     "react": "^0.14.8",
     "react-dom": "^0.14.8",
-    "simple-react-forms": "git+https://github.com/nickolusroy/simple-react-forms.git#utilities-upgrade",
-    "simple-react-utilities": "git+https://github.com/nickolusroy/simple-react-utilities.git#unit-testing-setup",
+    "simple-react-forms": "git+https://github.com/nickolusroy/simple-react-forms.git#master",
+    "simple-react-utilities": "git+https://github.com/nickolusroy/simple-react-utilities.git#master",
     "whatwg-fetch": "^0.11.0"
   },
   "devDependencies": {
