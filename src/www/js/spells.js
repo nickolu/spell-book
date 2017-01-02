@@ -1,6 +1,7 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
-import * as utilities from "../../../node_modules/simple-react-utilities/utilities.js";
+var utilities = require("../../../node_modules/simple-react-utilities/js/utilities.js");
+
 import spellData from '../json/spells.json';
 import { ShowHideButton } from './components/show-hide-button.js';
 import { SearchFilter } from './components/search-filter.js';
@@ -8,6 +9,7 @@ import { CardSizeButton } from './components/card-size-button.js';
 import { FilterButton } from './components/filter-button.js';
 import { FilterButtonGroup } from './components/filter-button-group.js';
 import { FilterSet } from './components/filter-set.js';
+
 
 
 //TODO: when making multiple selections in school or level, should add to total cards

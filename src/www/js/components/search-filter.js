@@ -1,5 +1,6 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
+
 import { TextInput } from '../../../../node_modules/simple-react-forms/form-fields/text-input.js';
 import { CheckBoxGroup } from '../../../../node_modules/simple-react-forms/form-fields/checkbox-group.js';
 import { ShowHideButton } from './show-hide-button.js';

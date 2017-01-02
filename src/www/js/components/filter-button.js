@@ -1,6 +1,7 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
-import * as utilities from "../../../../node_modules/simple-react-utilities/utilities.js";
+var utilities = require("../../../../node_modules/simple-react-utilities/js/utilities.js");
+
 import { SubmitButton } from '../../../../node_modules/simple-react-forms/form-fields/submit-button.js';
 
 /**

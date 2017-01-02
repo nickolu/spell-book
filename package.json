@@ -1,19 +1,19 @@
 {
-  "name": "react_05112016",
+  "name": "spell-book",
   "version": "1.0.0",
-  "description": "Class Files",
+  "description": "View and filter spell objects",
   "main": "gulpfile.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/training4developers/react_05092016.git"
+    "url": "git+https://github.com/nickolusroy/spell-book.git"
   },
   "keywords": [],
-  "author": "Eric W. Greene",
+  "author": "Nick Cunningham",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/training4developers/react_05092016/issues"
+    "url": "https://github.com/nickolusroy/spell-book/issues"
   },
-  "homepage": "https://github.com/training4developers/react_05092016#readme",
+  "homepage": "https://github.com/nickolusroy/spell-book#readme",
   "dependencies": {
     "bootstrap": "^4.0.0-alpha.2",
     "es6-promise": "^3.1.2",
