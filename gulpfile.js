@@ -85,9 +85,9 @@ gulp.task('default', defaultTasks);
 gulp.task('localdev', defaultTasks, function () {
 
 	gulp.watch(webAppFiles, ['process-web-app-js']);
-	gulp.watch(webAppCssFiles, ['process-web-app-css']);
-	gulp.watch(webAppLessFiles, ['process-web-app-less']);
-	gulp.watch(webAppHtmlFiles, ['process-web-app-html']);
-	gulp.watch(serverAppFiles, ['process-server-app']);
+	// gulp.watch(webAppCssFiles, ['process-web-app-css']);
+	// gulp.watch(webAppLessFiles, ['process-web-app-less']);
+	// gulp.watch(webAppHtmlFiles, ['process-web-app-html']);
+	// gulp.watch(serverAppFiles, ['process-server-app']);
 
 });
