@@ -46,6 +46,14 @@
     "choices": ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"],
     "type": "alphabet"
   },
+  "range": {
+    "choices": ["self", "5 feet", "10 feet", "15 feet", "30 feet", "60 feet", "90 feet", "120 feet", "100 feet", "150 feet", "300 feet", "500 feet"],
+    "usePartialMatch" : "true"
+  },
+  "duration" : {
+    "choices" : ["Instantaneous", "1 round", "6 rounds", "1 minute", "10 minutes", "1 hour", "8 hours", "24 hours", "7 days", "30 days"],
+    "usePartialMatch" : "true"
+  },
   "search": {
     "choices": [{
       "label": "Name",
