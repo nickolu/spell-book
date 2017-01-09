@@ -2,6 +2,7 @@ var React = require('react');
 var ReactDOM = require('react-dom');
 var utilities = require("../../../node_modules/simple-react-utilities/js/utilities.js");
 
+import config from '../json/config.json';
 import spellData from '../json/spells.json';
 import { ShowHideButton } from './components/show-hide-button.js';
 import { SearchFilter } from './components/search-filter.js';
@@ -38,6 +39,30 @@ class SpellBook extends React.Component {
     this.setExclusiveFilters = this.setExclusiveFilters.bind(this);
     this.setInclusiveFilters = this.setInclusiveFilters.bind(this);
   }
+
+  getQueryVariable(variable) {
+       var query = window.location.search.substring(1);
+       var vars = query.split("&");
+       for (var i=0;i<vars.length;i++) {
+               var pair = vars[i].split("=");
+               if(pair[0] == variable){return pair[1];}
+       }
+       return(false);
+  }
+
+  getFiltersFromQueryString() {
+    var filter = {};
+
+    filter = {
+      key:"name",
+      type:"search",
+      usePartialMatch:true,
+      value:decodeURIComponent(this.getQueryVariable('name'))
+    }
+
+    return filter;
+  }
+
 
   /**
    * gets the filtered spells using list of filters in state.filters
@@ -92,6 +117,7 @@ class SpellBook extends React.Component {
     var spellProp, spellSubProp;
     var filteredSpells = [];
 
+    console.log(this.state.filter);
     /**
      * checks if a string exists in another string
      * @param  {string} str1 [string to search]
@@ -185,75 +211,32 @@ class SpellBook extends React.Component {
   }
 
 
+  componentDidMount () {
+    function updatefromQuery() {
+      var sortedSpellData = utilities.sortObjectsByProp(spellData, "name");
+
+
+      this.state = {
+        spells : sortedSpellData,
+        sortSpells : "name",
+        descriptionSearch : false,
+        filter : [this.getFiltersFromQueryString()]
+      };
+      this.setExclusiveFilters();
+      this.setInclusiveFilters();
+    }
+    
+
+    if (this.getQueryVariable('name')) {
+      this.forceUpdate(updatefromQuery);  
+    }
+  }
+
   /**
    * puts everything in the DOM
    */
 	render() {
-    var filterOptions = {
-      components : {
-        'choices' : [
-          {
-            "val" : "V",
-            "label" : "Verbal"
-          },
-          {
-            "val" : "S",
-            "label" : "Somatic"
-          },
-          {
-            "val" : "M",
-            "label" : "Material"
-          },
-          {
-            "val" : "gp",
-            "label" : "GP"
-          }
-        ],
-        'multiSelect' : true,
-        'usePartialMatch' : true
-      },
-      page : {
-        'choices' : [
-          {
-            "val":"phb",
-            "label" : "Players Handbook"
-          },
-          {
-            "val":"ee",
-            "label" : "Elemental Evil"
-          },
-          {
-            "val":"scag",
-            "label" : "Sword Coast Adventurers Guide"
-          },
-        ],
-        'usePartialMatch' : true
-      },
-      casting_time : {
-        'choices' : ["1 action","1 reaction","1 bonus action","1 minute","10 minutes","1 hour","24 hours"]
-      },
-      school : {
-        'choices' : ["Conjuration","Divination","Enchantment","Evocation","Illusion","Necromancy","Transmutation"]
-      },
-      class : {
-        'choices' : ["Bard","Cleric","Druid","Paladin","Ranger","Sorcerer","Warlock","Wizard"],
-        'multiSelect' : true
-      },
-      level : {
-        'choices' : ["Cantrip","1st","2nd","3rd","4th","5th","6th","7th","8th","9th"]
-      },
-      name : {
-        'choices' : ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"],
-        'type' : 'alphabet'
-      },
-      search : {
-        'choices' : [
-          {label : "Name", name : "search_for_name", value : 1, id : "name", checked : true},
-          {label : "Description", name : "search_for_description", value : 1, id : "description"},
-          {label : "School", name : "search_for_school", value : 1, id : "school"},
-        ]
-      }
-    };
+    var filterOptions = config;
 
     return  <div className="container">
               <div className="row">
@@ -306,6 +289,14 @@ class SpellBook extends React.Component {
                           data={spellData} 
                         />
                         <FilterButton 
+                          prop="concentration" 
+                          val="no" 
+                          label="Not Concentration" 
+                          onUpdate={this.setExclusiveFilters} 
+                          context={this} 
+                          data={spellData} 
+                        />
+                        <FilterButton 
                           prop="ritual" 
                           val="yes" 
                           label="Ritual" 
@@ -313,6 +304,17 @@ class SpellBook extends React.Component {
                           context={this} 
                           data={spellData} 
                         />
+                        <FilterButton 
+                          prop="ritual" 
+                          val="yes" 
+                          label="Not Ritual" 
+                          onUpdate={this.setExclusiveFilters} 
+                          context={this} 
+                          data={spellData} 
+                        />
+
+
+
                       </div>
 
                     </div>
