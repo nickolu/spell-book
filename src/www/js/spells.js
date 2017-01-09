@@ -57,7 +57,7 @@ class SpellBook extends React.Component {
       key:"name",
       type:"search",
       usePartialMatch:true,
-      value:decodeURIComponent(this.getQueryVariable('name'))
+      value:decodeURIComponent(this.getQueryVariable('search'))
     }
 
     return filter;
@@ -125,6 +125,10 @@ class SpellBook extends React.Component {
      * @return {boolean}     [whether str2 is found is str1]
      */
     function checkPartialMatch(str1,str2) {
+      if (str2) {
+        str2 = str2.replace(/_/g, ' ');
+      }
+      
       return usePartialMatch && str1.toLowerCase().indexOf(str2.toLowerCase()) > -1;
     }
 
@@ -227,7 +231,7 @@ class SpellBook extends React.Component {
     }
     
 
-    if (this.getQueryVariable('name')) {
+    if (this.getQueryVariable('search')) {
       this.forceUpdate(updatefromQuery);  
     }
   }
