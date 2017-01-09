@@ -128,7 +128,7 @@ class SpellBook extends React.Component {
       if (str2) {
         str2 = str2.replace(/_/g, ' ');
       }
-      
+
       return usePartialMatch && str1.toLowerCase().indexOf(str2.toLowerCase()) > -1;
     }
 
@@ -195,7 +195,7 @@ class SpellBook extends React.Component {
                             <p className="spell-card-property spell_ritual"><strong>Ritual:</strong> {spell.ritual}</p>
                             <p className="spell-card-property spell_page"><strong>Page:</strong> {spell.page}</p>
                             <p className="spell-card-property spell_school"><strong>School:</strong> {spell.school}</p>
-                            <p className="spell-card-property spell_class"><strong>Class:</strong> {utilities.getArrayFromObject(spell,'class',true)}</p>
+                            <p className="spell-card-property spell_class"><strong>Class:</strong> {getClassNames(spell)}</p>
                           </div>
                           <div className="col-xs-12">
                             <hr />
@@ -205,6 +205,17 @@ class SpellBook extends React.Component {
                       </div>
                    </div>
               )}</div>;
+
+    function getClassNames(spellObj) {
+      var classes = spellObj.class;
+      var classArray = [];
+
+      for (var obj in classes) {
+        classArray.push(obj);
+      }
+
+      return classArray.join(", ");
+    }
 
 
     if (this.state.spells.length === 0) {
