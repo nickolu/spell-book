@@ -285,7 +285,7 @@ class SpellBook extends React.Component {
                     <div className="col-xs-12 col-sm-6 col-md-3">
                       <FilterSet 
                         id="components" 
-                        label="components" 
+                        label="Components" 
                         filterOptions={filterOptions.components} 
                         onUpdate={this.setExclusiveFilters} 
                         data={spellData} 
@@ -342,6 +342,25 @@ class SpellBook extends React.Component {
                       data={spellData} 
                       context={this} 
                     />
+
+                    <FilterSet id="duration" 
+                      cssClass="col-xs-12 col-sm-6 col-md-3" 
+                      label="Duration" 
+                      filterOptions={filterOptions.duration} 
+                      onUpdate={this.setExclusiveFilters} 
+                      data={spellData} 
+                      context={this} 
+                    />
+
+                    <FilterSet id="range" 
+                      cssClass="col-xs-12 col-sm-6 col-md-3" 
+                      label="Range" 
+                      filterOptions={filterOptions.range} 
+                      onUpdate={this.setExclusiveFilters} 
+                      data={spellData} 
+                      context={this} 
+                    />
+
                     <FilterSet id="school" 
                       cssClass="col-xs-12 col-sm-6 col-md-3" 
                       label="School" 
@@ -350,22 +369,25 @@ class SpellBook extends React.Component {
                       data={spellData} 
                       context={this}
                     />
-                    <FilterSet id="class" 
-                      cssClass="col-xs-12 col-sm-6" 
-                      label="Class" 
-                      filterOptions={filterOptions.class} 
-                      onUpdate={this.setExclusiveFilters} 
-                      data={spellData} 
-                      context={this}
-                    />
-                    <FilterSet id="level" 
-                      cssClass="col-xs-12 col-sm-6" 
-                      label="Level" 
-                      filterOptions={filterOptions.level} 
-                      onUpdate={this.setExclusiveFilters} 
-                      data={spellData} 
-                      context={this}
-                    />
+                    <div className="col-sm-6">
+                      <FilterSet id="class" 
+                        cssClass="col-xs-12" 
+                        label="Class" 
+                        filterOptions={filterOptions.class} 
+                        onUpdate={this.setExclusiveFilters} 
+                        data={spellData} 
+                        context={this}
+                      />
+                      <FilterSet id="level" 
+                        cssClass="col-xs-12" 
+                        label="Level" 
+                        filterOptions={filterOptions.level} 
+                        onUpdate={this.setExclusiveFilters} 
+                        data={spellData} 
+                        context={this}
+                      />
+                    </div>
+                    
                     <FilterSet id="name" 
                       cssClass="col-xs-12" 
                       label="Filter Alphabetically" 
