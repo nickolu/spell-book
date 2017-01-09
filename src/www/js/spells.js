@@ -225,10 +225,11 @@ class SpellBook extends React.Component {
       this.setExclusiveFilters();
       this.setInclusiveFilters();
     }
-      
-    this.forceUpdate(updatefromQuery);
-      
     
+
+    if (this.getQueryVariable('name')) {
+      this.forceUpdate(updatefromQuery);  
+    }
   }
 
   /**
