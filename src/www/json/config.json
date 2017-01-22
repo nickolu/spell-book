@@ -47,7 +47,7 @@
     "type": "alphabet"
   },
   "range": {
-    "choices": ["self", "5 feet", "10 feet", "15 feet", "30 feet", "60 feet", "90 feet", "120 feet", "100 feet", "150 feet", "300 feet", "500 feet"],
+    "choices": ["self", "Touch", "5 feet", "10 feet", "15 feet", "30 feet", "60 feet", "90 feet", "120 feet", "100 feet", "150 feet", "300 feet", "500 feet", "500 miles"],
     "usePartialMatch" : "true"
   },
   "duration" : {
