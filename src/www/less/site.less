@@ -1,6 +1,6 @@
 html body {
     overflow-y: scroll;
-	color: #eeeeee;
+    color: #eeeeee;
     background: #333333;
 }
 .as-label { // ability scores label
@@ -10,6 +10,7 @@ html body {
 
 .height-zero {
     overflow: hidden;
+    transition: height 0.25s;
     height: 0 !important;
 }
 
@@ -17,7 +18,7 @@ html body {
     position: relative;
 }
 
-.no-spells {
+.no-cards {
     margin-top: 32px;
 }
 
@@ -40,10 +41,82 @@ html body {
         display: inline-block;
         margin-right: 8px;
         color: #eeeeee !important;
+    } 
+}
+
+.form-field span {
+    display: none;
+}
+
+.form-field label {
+    width: 100%;
+}
+
+input.form-control {
+    padding: 19px 8px;
+    font-size: 22px;
+}
+
+.show-hide-advanced-filter {
+    padding: 10px;
+    display: inline-block;
+    position: relative;
+    top: -4px;
+}
+
+.clear-input {
+    position: relative;
+    color: #666;
+    left: 84%;
+    top: -47px;
+    width: 44px;
+    height: 44px;
+    text-align: center;
+    font-size: 26px;
+    cursor: pointer;
+    font-family: verdana;
+    padding: 0;
+    margin: 0;
+    display: block;
+    padding-bottom: 44px;
+    @media screen and (min-width: 321px) {
+        left: 88%;
+    }
+    @media screen and (min-width: 481px) {
+        left: 93%;
+    }
+    @media screen and (min-width: 769px) {
+        left: 95%;
+    }
+    @media screen and (min-width: 993px) {
+        left: 96%;
+    }
+    @media screen and (min-width: 1201) {
+        left: 98%;
     }
 }
 
-.spell-card {
+.filterByText-wrapper {
+    height: 70px;
+}
+
+.advanced-filters {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.filter-group.filters-advanced {
+    padding: 7px;
+}
+.filter-button-group {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+
+.card {
     padding: 2px;
     color: #000000;
     
@@ -97,7 +170,7 @@ html body {
         align-items: flex-start;
 
         &[data-card-size=sm] {
-            .spell-card {
+            .card {
                 padding: 2px;
 
                 .closed-button {
@@ -144,7 +217,7 @@ html body {
 
 
                     &.height-normal {
-                    	margin-top: 12px;
+                        margin-top: 12px;
                         height: auto;
                     }
                 }
@@ -195,28 +268,31 @@ html body {
     }
 
     &.name {
-	    width: 37px;
-	    padding: 10px 0;
-	    text-align: center;
-	}
+        width: 37px;
+        padding: 10px 0;
+        text-align: center;
+    }
 
-	&.lg, &.xl {
-		display: none;
-	}
+    &.lg, &.xl {
+        display: none;
+    }
 }
 
 @media (min-width: 768px) {
-	.btn {
-		&.lg, &.xl {
-			display: inline-block;
-		}
-	}
-
-    .card-size-controls {
-    	top: 15px;
+    .advanced-filters {
+        max-height: 500px;
+    }
+    .btn {
+        &.lg, &.xl {
+            display: inline-block;
+        }
     }
 
-    .spell-card {
+    .card-size-controls {
+        top: 15px;
+    }
+
+    .card {
         font-size: 12px;
 
         &-inner {
@@ -232,19 +308,19 @@ html body {
         }
 
         &-container {
-        	&[data-card-size=sm] {
-	            .spell-card {
-	                &-inner {
-	                	padding: 4px 8px;
+            &[data-card-size=sm] {
+                .card {
+                    &-inner {
+                        padding: 4px 8px;
 
-	                	.show-hide {
-	                		top: -10px;
-	                	}
-	                }
-	            }
-	        }
+                        .show-hide {
+                            top: -10px;
+                        }
+                    }
+                }
+            }
             &[data-card-size=md] {
-                .spell-card {
+                .card {
                     font-size: 12px;
                     width: 33.33333333%;
 
@@ -261,13 +337,13 @@ html body {
             }
 
             &[data-card-size=lg] {
-                .spell-card {
+                .card {
                     width: 50%;
                 }
             }
 
             &[data-card-size=xl] {
-                .spell-card {
+                .card {
                     width: 100%;
                 }
             }
