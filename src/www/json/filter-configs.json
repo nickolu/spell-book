@@ -1,0 +1,292 @@
+{
+  "class": [
+    {
+      "label": "Bard",
+      "filterArgs": ["Bard", "yes"]
+    },
+    {
+      "label": "Cleric",
+      "filterArgs": ["Cleric", "yes"]
+    },
+    {
+      "label": "Druid",
+      "filterArgs": ["Druid", "yes"]
+    },
+    {
+      "label": "Paladin",
+      "filterArgs": ["Paladin", "yes"]
+    },
+    {
+      "label": "Ranger",
+      "filterArgs": ["Ranger", "yes"]
+    },
+    {
+      "label": "Sorcerer",
+      "filterArgs": ["Sorcerer", "yes"]
+    },
+    {
+      "label": "Warlock",
+      "filterArgs": ["Warlock", "yes"]
+    },
+    {
+      "label": "Wizard",
+      "filterArgs": ["Wizard", "yes"]
+    }
+  ],
+  "level": [
+    {
+      "label": "Cantrip",
+      "filterArgs": ["level", "cantrip"]
+    },
+    {
+      "label": "1st",
+      "filterArgs": ["level", "1st"]
+    },
+    {
+      "label": "2nd",
+      "filterArgs": ["level", "2nd"]
+    },
+    {
+      "label": "3rd",
+      "filterArgs": ["level", "3rd"]
+    },
+    {
+      "label": "4th",
+      "filterArgs": ["level", "4th"]
+    },
+    {
+      "label": "5th",
+      "filterArgs": ["level", "5th"]
+    },
+    {
+      "label": "6th",
+      "filterArgs": ["level", "6th"]
+    },
+    {
+      "label": "7th",
+      "filterArgs": ["level", "7th"]
+    },
+    {
+      "label": "8th",
+      "filterArgs": ["level", "8th"]
+    },
+    {
+      "label": "9th",
+      "filterArgs": ["level", "9th"]
+    }
+  ],
+  "source": [
+    {
+      "label": "Player's Handbook",
+      "filterArgs": ["page", "phb"]
+    },
+    {
+      "label": "Elemental Evil",
+      "filterArgs": ["page", "ee"]
+    },
+    {
+      "label": "Sword Coast Adventurers' Guide",
+      "filterArgs": ["page", "scag"]
+    }
+  ],
+  "casting_time": [
+    {
+      "label": "1 action",
+      "filterArgs": ["casting_time", "1 action"]
+    },
+    {
+      "label": "1 reaction",
+      "filterArgs": ["casting_time", "1 reaction"]
+    },
+    {
+      "label": "1 bonus action",
+      "filterArgs": ["casting_time", "1 bonus action"]
+    },
+    {
+      "label": "1 minute",
+      "filterArgs": ["casting_time", "1 minute"]
+    },
+    {
+      "label": "10 minutes",
+      "filterArgs": ["casting_time", "10 minutes"]
+    },
+    {
+      "label": "1 hour",
+      "filterArgs": ["casting_time", "1 hour"]
+    },
+    {
+      "label": "24 hours",
+      "filterArgs": ["casting_time", "24 hours"]
+    }
+  ],
+  "range": [
+    {
+      "label": "Self",
+      "filterArgs": ["range", "self"]
+    },
+    {
+      "label": "Touch",
+      "filterArgs": ["range", "Touch"]
+    },
+    {
+      "label": "5 feet",
+      "filterArgs": ["range", "5 feet"]
+    },
+    {
+      "label": "10 feet",
+      "filterArgs": ["range", "10 feet"]
+    },
+    {
+      "label": "15 feet",
+      "filterArgs": ["range", "15 feet"]
+    },
+    {
+      "label": "30 feet",
+      "filterArgs": ["range", "30 feet"]
+    },
+    {
+      "label": "60 feet",
+      "filterArgs": ["range", "60 feet"]
+    },
+    {
+      "label": "90 feet",
+      "filterArgs": ["range", "90 feet"]
+    },
+    {
+      "label": "120 feet",
+      "filterArgs": ["range", "120 feet"]
+    },
+    {
+      "label": "100 feet",
+      "filterArgs": ["range", "100 feet"]
+    },
+    {
+      "label": "150 feet",
+      "filterArgs": ["range", "150 feet"]
+    },
+    {
+      "label": "300 feet",
+      "filterArgs": ["range", "300 feet"]
+    },
+    {
+      "label": "500 feet",
+      "filterArgs": ["range", "500 feet"]
+    },
+    {
+      "label": "500 miles",
+      "filterArgs": ["range", "500 miles"]
+    }
+  ],
+  "components": [
+    {
+      "label": "V",
+      "filterArgs": ["components", "V"]
+    },
+    {
+      "label": "S",
+      "filterArgs": ["components", "S"]
+    },
+    {
+      "label": "M",
+      "filterArgs": ["components", "M"]
+    },
+    {
+      "label": "GP",
+      "filterArgs": ["components", "GP"]
+    }
+  ],
+  "duration": [
+    {
+      "label" :"Instantaneous",
+      "filterArgs" : ["duration","Instantaneous"]
+    },
+    {
+      "label" :"1 round",
+      "filterArgs" : ["duration","1 round"]
+    },
+    {
+      "label" :"6 rounds",
+      "filterArgs" : ["duration","6 rounds"]
+    },
+    {
+      "label" :"1 minute",
+      "filterArgs" : ["duration","1 minute"]
+    },
+    {
+      "label" :"10 minutes",
+      "filterArgs" : ["duration","10 minutes"]
+    },
+    {
+      "label" :"1 hour",
+      "filterArgs" : ["duration","1 hour"]
+    },
+    {
+      "label" :"8 hours",
+      "filterArgs" : ["duration","8 hours"]
+    },
+    {
+      "label" :"24 hours",
+      "filterArgs" : ["duration","24 hours"]
+    },
+    {
+      "label" :"7 days",
+      "filterArgs" : ["duration","7 days"]
+    },
+    {
+      "label" : "30 days",
+      "filterArgs" : ["duration","30 days"]
+    }
+  ],
+  "school": [
+    {
+      "label" : "Conjuration",
+      "filterArgs" : ["school","Conjuration"]
+    },
+    {
+      "label" : "Divination",
+      "filterArgs" : ["school","Divination"]
+    },
+    {
+      "label" : "Enchantment",
+      "filterArgs" : ["school","Enchantment"]
+    },
+    {
+      "label" : "Evocation",
+      "filterArgs" : ["school","Evocation"]
+    },
+    {
+      "label" : "Illusion",
+      "filterArgs" : ["school","Illusion"]
+    },
+    {
+      "label" : "Necromancy",
+      "filterArgs" : ["school","Necromancy"]
+    },
+    {
+      "label" : "Transmutation",
+      "filterArgs" : ["school","Transmutation"]
+    }
+  ],
+  "options": [
+    {
+      "label": "Concentration",
+      "filterArgs": ["concentration", "yes"]
+    },
+    {
+      "label": "Not Concentration",
+      "filterArgs": ["concentration", "no"]
+    },
+    {
+      "label": "Ritual",
+      "filterArgs": ["ritual", "yes"]
+    },
+    {
+      "label": "Not Ritual",
+      "filterArgs": ["ritual", "no"]
+    },
+    {
+      "label": "At Higher Levels",
+      "filterArgs": ["description", "at higher level"]
+    }
+  ]
+}
