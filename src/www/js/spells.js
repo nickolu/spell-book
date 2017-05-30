@@ -6,6 +6,7 @@ import cardData from '../json/spells.json';
 import filterOptions from '../json/filter-configs.json';
 import Filter from '../../../node_modules/card-filters/src/www/js/filter.js';
 import { CardBook } from '../../../node_modules/card-filters/src/www/js/cards.js'
+import { Card } from '../../../node_modules/card-filters/src/www/js/components/card.js'
 import { FilterButtonGroup } from '../../../node_modules/card-filters/src/www/js/components/filter-button-group.js';
 import { FilterButton } from '../../../node_modules/card-filters/src/www/js/components/filter-button.js';
 import { TextInput } from '../../../node_modules/simple-react-forms/form-fields/text-input.js';
@@ -193,6 +194,88 @@ class SpellBook extends React.Component {
               })}
             </div>
   }
+
+  renderCards(cardsData) {
+    var i = 0;
+    var cardsArr = cardsData || [];
+    var cards = <div className="row card-container">{cardsArr.map(card => <div className="card card-inner col-xs-12 col-sm-6 col-md-4" key={card.name}><Card settings={{
+                        name : card.name,
+                        description : card.description,
+                        col1Props : [
+                          {
+                            cssClass : 'card_level',
+                            label : 'Level',
+                            value : card.level 
+                          },
+                          {
+                            cssClass : 'card_casting_time',
+                            label : 'Casting Time',
+                            value : card.casting_time 
+                          },
+                          {
+                            cssClass : 'card_duration',
+                            label : 'Duration',
+                            value : card.duration 
+                          },
+                          {
+                            cssClass : 'card_range',
+                            label : 'Range',
+                            value : card.range 
+                          },
+                          {
+                            cssClass : 'card_components',
+                            label : 'Components',
+                            value : card.components 
+                          }
+                        ],
+                        col2Props : [
+                          {
+                            cssClass : 'card_concentration',
+                            label : 'Concentration',
+                            value : card.concentration 
+                          },
+                          {
+                            cssClass : 'card_ritual',
+                            label : 'Ritual',
+                            value : card.ritual 
+                          },
+                          {
+                            cssClass : 'card_page',
+                            label : 'Page',
+                            value : card.page 
+                          },
+                          {
+                            cssClass : 'card_school',
+                            label : 'School',
+                            value : card.school 
+                          },
+                          {
+                            cssClass : 'card_class',
+                            label : 'Class',
+                            value : getClassNames(card) 
+                          }
+                        ]
+                     }} /></div>)}
+              </div>;
+    
+    function getClassNames(cardObj) {
+      var classes = cardObj.class;
+      var classArray = [];
+
+      for (var obj in classes) {
+        classArray.push(obj);
+      }
+
+      return classArray.join(", ");
+    }
+
+
+    if (!cardsData || cardsData.length === 0) {
+      cards = <div className="card-container col-xs-12"><h4 className="no-cards">No cards matching the selected filters</h4></div>
+    }
+
+    return cards;
+  }
   
   /**
    * puts everything in the DOM
@@ -205,6 +288,7 @@ class SpellBook extends React.Component {
                 cardData={cardData}
                 searchFilter={this.searchFilter}
                 filters={[this.classFilters, this.levelFilters]}
+                renderCards={this.renderCards}
                 advancedFilters={[this.componentFilters,this.optionsFilters,this.schoolFilters,this.durationFilters,this.castingTimeFilters,this.rangeFilters,this.sourceFilters]}
               />
             </div>;
