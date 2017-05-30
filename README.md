@@ -8,19 +8,19 @@ try it here: http://dnd.tools/5e-spellbook/
 
 Clone this repo then do the following:
 
-```npm install```
+    npm install
 
-```cd node_modules/card-filters```
+    cd node_modules/card-filters
 
-```npm install```
+    npm install
 
-```cd node_modules/simple-react-forms'
+    cd node_modules/simple-react-forms'
 
-```npm install```
+    npm install
 
-```cd ../../../..```
+    cd ../../../..
 
-```gulp localdev```
+    gulp localdev
 
 Then open a new terminal and run
     `gulp server`
