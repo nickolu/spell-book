@@ -56,11 +56,8 @@ class SpellBook extends React.Component {
       filterName : "class",
       filterFunc : filter.by.subProp("class").value, 
       onActivate : activate, 
-      onDeactivate : deactivate
+      onDeactivate : deactivate // stopFilteringBy(filterName, filterObj)
     }
-
-    console.log(filterOptions.class);
-    console.log(filterOptions);
 
     return  <div>
               <h4>Class</h4>
@@ -204,6 +201,7 @@ class SpellBook extends React.Component {
 
     return  <div className="container">
               <CardBook 
+                label="Spells"
                 cardData={cardData}
                 searchFilter={this.searchFilter}
                 filters={[this.classFilters, this.levelFilters]}
