@@ -7,7 +7,7 @@ const gulp = require('gulp');
 const babel = require('gulp-babel');
 const less = require('gulp-less');
 
-const serverAppFiles = ['src/**/*.jsx','!src/www/**'];
+const serverAppFiles = ['src/**/*.jsx','!src/www/**','src/server.js'];
 const webAppFiles = ['src/www/**/*.js','node_modules/**/**/*.js'];
 const webAppHtmlFiles = ['src/www/**/*.html'];
 const webAppCssFiles = ['src/www/css/**/*.css'];

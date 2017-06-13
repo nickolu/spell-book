@@ -286,6 +286,7 @@ class SpellBook extends React.Component {
               <CardBook 
                 label="Spells"
                 cardData={cardData}
+                navigation={function(){}}
                 searchFilter={this.searchFilter}
                 filters={[this.classFilters, this.levelFilters]}
                 renderCards={this.renderCards}
