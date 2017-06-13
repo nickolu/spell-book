@@ -44,7 +44,6 @@
     "webpack-stream": "^3.1.0"
   },
   "scripts": {
-    "build": "babel input.js -o compiled.js",
-    "getNicksCode": "cd node_modules/card-filter && npm install"
+    "build": "babel input.js -o compiled.js"
   }
 }
