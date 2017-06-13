@@ -1,7 +1,7 @@
 html body {
     overflow-y: scroll;
     color: #eeeeee;
-    background: #333333;
+    background: #204520;
 }
 .as-label { // ability scores label
     display: inline-block;
@@ -102,7 +102,7 @@ input.form-control {
 
 .advanced-filters {
     display: flex;
-    flex-flow: column wrap;
+    flex-flow: row wrap;
     justify-content: flex-start;
     align-items: flex-start;
     align-content: flex-start;
@@ -119,10 +119,10 @@ input.form-control {
 
 .card {
     padding: 2px;
-    color: #000000;
+    color: #001e00;
     
     h2, h3, h4, strong {
-        color: #58180d;
+        color: #084800;
     }
 
     h2 {
@@ -130,7 +130,7 @@ input.form-control {
     }
     
     hr {
-        border-top: 1px solid #58180d;
+        border-top: 1px solid #084800;
     }
     
     td, th {
@@ -160,13 +160,15 @@ input.form-control {
 
     &-inner {
         padding: 0 7px;
-        border: 1px solid;
-        background-image: url(http://www.webcunningham.com/wp-content/uploads/2016/10/spell-background.jpg);
+        background: #eeeeee;
+        border: 5px solid #204520;
+        box-sizing: border-box;
+        border-radius: 8px;
     }
 
     &-container {
         display: flex;
-        flex-flow: column wrap;
+        flex-flow: row wrap;
         justify-content: flex-start;
         align-items: flex-start;
         align-content: flex-start;
@@ -199,7 +201,7 @@ input.form-control {
                         width: 100%;
                         height: 100%;
                         text-align: right;
-                        color: #000000;
+                        color: #001e00;
                     }
 
                     > h2 {
@@ -260,13 +262,13 @@ input.form-control {
 .btn {
     margin: 1px;
     color: #333333;
-    border: 1px solid #000000;
+    border: 1px solid #001e00;
     border-radius: 0;
     background: #eeeeee;
 
     &.active {
         color: #ffffff;
-        background-color: #58180d;
+        background-color: #001e00;
     }
 
     &.name {
